@@ -14,6 +14,39 @@
             .attribution a {
                 color: hsl(228, 45%, 44%);
             }
+            .bottomBar {
+                align-items: start;
+                display: grid;
+                justify-content: center;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            .commentCard {
+                background-color: hsl(300, 43%, 22%);
+                border-radius: 10px;
+                margin: 12px;
+                padding: 32px;
+            }
+            .commentCard img {
+                border-radius: 50px;
+                height: auto;
+                width: 40px;
+            }
+            .commentCard p {
+                color: hsl(0, 0%, 100%);
+            }
+            .commentCardAuthor {
+                display: flex;
+                flex-direction: row;
+            }
+            .commentCardAuthorInfo {
+                margin-left: 20px;
+            }
+            .commentCardAuthorInfoName {
+                color: hsl(0, 0%, 100%);
+            }
+            .commentCardAuthorInfoStatus {
+                color: hsl(333, 80%, 67%);
+            }
             .leftMargin {
                 margin-left: 64px;
             }
@@ -23,6 +56,12 @@
             .topBar {
                 display: grid;
                 grid-template-columns: auto 1fr;
+            }
+            .topMargin {
+                margin-top: 32px;
+            }
+            .topMarginLarge {
+                margin-top: 64px;
             }
             .topBarStarContainer {
                 display: grid;
@@ -48,6 +87,10 @@
             }
             body {
                 align-items: center;
+                background-image: url('images/bg-pattern-top-desktop.svg'), url('images/bg-pattern-bottom-desktop.svg');
+                background-size: 1200px, 1600px;
+                background-position: calc(50% - 700px) calc(50% - 200px), calc(50% + 100px) calc(50% + 100px);
+                background-repeat: no-repeat;
                 display: flex;
                 flex-direction: column;
                 font-family: "League Spartan",sans-serif;
@@ -127,7 +170,7 @@
                         Excellent!"
                     </p>
                 </div>
-                <div class="commentCard">
+                <div class="commentCard topMargin">
                     <section class="commentCardAuthor">
                         <img src="images/image-irene.jpg" alt="image of Irene Roberts">
                         <div class="commentCardAuthorInfo">
@@ -139,7 +182,7 @@
                         delighted with the simplicity of the purchase and the speed of delivery."
                     </p>
                 </div>
-                <div class="commentCard">
+                <div class="commentCard topMarginLarge">
                     <section class="commentCardAuthor">
                         <img src="images/image-anne.jpg" alt="image of Anne Wallace">
                         <div class="commentCardAuthorInfo">
