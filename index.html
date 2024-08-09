@@ -19,6 +19,11 @@
                 display: grid;
                 justify-content: center;
                 grid-template-columns: 1fr 1fr 1fr;
+
+                @media (max-width: 750px) {
+                    grid-template-columns: 1fr;
+                    grid-template-rows: auto auto auto;
+                }
             }
             .commentCard {
                 background-color: hsl(300, 43%, 22%);
@@ -29,6 +34,7 @@
             .commentCard img {
                 border-radius: 50px;
                 height: auto;
+                max-height: 40px;
                 width: 40px;
             }
             .commentCard p {
@@ -49,25 +55,64 @@
             }
             .leftMargin {
                 margin-left: 64px;
+
+                @media (max-width: 750px) {
+                    margin-left: 0;
+                }
             }
             .leftMarginLarge {
                 margin-left: 128px;
+
+                @media (max-width: 750px) {
+                    margin-left: 0;
+                }
+            }
+            .starBar {
+                white-space: nowrap;
+                margin-right: 16px;
+
+                @media (max-width: 750px) {
+                    align-items: center;
+                    display: flex;
+                    justify-content: center;
+                    margin-right: 0;
+                }
             }
             .topBar {
                 display: grid;
-                grid-template-columns: auto 1fr;
+                grid-template-columns: auto auto;
+
+                @media (max-width: 750px) {
+                    align-items: center;
+                    grid-template-columns: auto;
+                    grid-template-rows: auto auto;
+                    justify-content: center;
+                }
             }
             .topMargin {
                 margin-top: 32px;
+
+                @media (max-width: 750px) {
+                    margin-top: 12px;
+                }
             }
             .topMarginLarge {
                 margin-top: 64px;
+
+                @media (max-width: 750px) {
+                    margin-top: 12px;
+                }
             }
             .topBarStarContainer {
                 display: grid;
                 justify-content: center;
                 grid-template-rows: auto auto auto;
                 margin-top: 60px;
+
+                @media (max-width: 750px) {
+                    margin-top: 24px;
+                    width: 100%;
+                }
             }
             .topBarStarContainerBar {
                 align-items: center;
@@ -77,37 +122,76 @@
                 justify-content: flex-start;
                 margin: 1px;
                 height: 64px;
-                padding-left: 24px;
+                padding: 0 24px;
                 width: 380px;
+
+                @media (max-width: 750px) {
+                    align-items: center;
+                    display: grid;
+                    grid-template-rows: 1fr 1fr;
+                    justify-content: center;
+                    margin-bottom: 16px;
+                    padding: 0 16px;
+                    width: 100%;
+                }
             }
             .topBarStarContainerBar label{
                 color: hsl(300, 43%, 22%);
                 font-weight: bold;
-                padding: 0 24px;
+                white-space: nowrap;
+            }
+            * {
+                box-sizing: border-box
             }
             body {
                 align-items: center;
                 background-image: url('images/bg-pattern-top-desktop.svg'), url('images/bg-pattern-bottom-desktop.svg');
                 background-size: 1200px, 1600px;
-                background-position: calc(50% - 700px) calc(50% - 200px), calc(50% + 100px) calc(50% + 100px);
+                background-position: -500px -100px, calc(50% + 100px) calc(50% + 100px);
                 background-repeat: no-repeat;
                 display: flex;
                 flex-direction: column;
                 font-family: "League Spartan",sans-serif;
                 justify-content: center;
+
+                @media (max-width: 750px) {
+                    background-image: url('images/bg-pattern-top-mobile.svg'), url('images/bg-pattern-bottom-mobile.svg');
+                    background-size: 1200px, 1600px;
+                    background-position: -500px -100px, calc(50% + 100px) calc(50% + 100px);
+                    background-repeat: no-repeat;
+                }
             }
             h1 {
                 color: hsl(300, 43%, 22%);
                 font-size: 42px;
                 max-width: 400px;
+
+                @media (max-width: 750px) {
+                    max-width: 100%;
+                    text-align: center;
+                }
             }
             header {
                 max-width: 500px;
+
+                @media (max-width: 750px) {
+                    max-width: 100%;
+                }
+            }
+            header p {
+                @media (max-width: 750px) {
+                    max-width: 100%;
+                    text-align: center;
+                }
             }
             main {
                 display: grid;
                 grid-template-rows: auto 1fr;
                 margin: 115px 10vw;
+
+                @media (max-width: 750px) {
+                    margin: 70px 16px;
+                }
             }
             p {
                 color: hsl(300, 43%, 22%);
@@ -126,30 +210,36 @@
                 </header>
                 <div class="topBarStarContainer">
                     <div class="topBarStarContainerBar">
-                        <img src="images/icon-star.svg" alt="start icon">
-                        <img src="images/icon-star.svg" alt="start icon">
-                        <img src="images/icon-star.svg" alt="start icon">
-                        <img src="images/icon-star.svg" alt="start icon">
-                        <img src="images/icon-star.svg" alt="start icon">
+                        <div class="starBar">
+                            <img src="images/icon-star.svg" alt="start icon">
+                            <img src="images/icon-star.svg" alt="start icon">
+                            <img src="images/icon-star.svg" alt="start icon">
+                            <img src="images/icon-star.svg" alt="start icon">
+                            <img src="images/icon-star.svg" alt="start icon">
+                        </div>
                         <label class="topBarStarBarLabel">Rated 5 Stars in Reviews</label>
                     </div>
                     <div class="leftMargin">
                         <div class="topBarStarContainerBar">
-                            <img src="images/icon-star.svg" alt="start icon">
-                            <img src="images/icon-star.svg" alt="start icon">
-                            <img src="images/icon-star.svg" alt="start icon">
-                            <img src="images/icon-star.svg" alt="start icon">
-                            <img src="images/icon-star.svg" alt="start icon">
+                            <div class="starBar">
+                                <img src="images/icon-star.svg" alt="start icon">
+                                <img src="images/icon-star.svg" alt="start icon">
+                                <img src="images/icon-star.svg" alt="start icon">
+                                <img src="images/icon-star.svg" alt="start icon">
+                                <img src="images/icon-star.svg" alt="start icon">
+                            </div>
                             <label class="topBarStarBarLabel">Rated 5 Stars in Report Guru</label>
                         </div>
                     </div>
                     <div class="leftMarginLarge">
                         <div class="topBarStarContainerBar leftMarginLarge">
-                            <img src="images/icon-star.svg" alt="start icon">
-                            <img src="images/icon-star.svg" alt="start icon">
-                            <img src="images/icon-star.svg" alt="start icon">
-                            <img src="images/icon-star.svg" alt="start icon">
-                            <img src="images/icon-star.svg" alt="start icon">
+                            <div class="starBar">
+                                <img src="images/icon-star.svg" alt="start icon">
+                                <img src="images/icon-star.svg" alt="start icon">
+                                <img src="images/icon-star.svg" alt="start icon">
+                                <img src="images/icon-star.svg" alt="start icon">
+                                <img src="images/icon-star.svg" alt="start icon">
+                            </div>
                             <label class="topBarStarBarLabel">Rated 5 Stars in BestTech</label>
                         </div>
                     </div>
