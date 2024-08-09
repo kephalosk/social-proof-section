@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+        <link rel="stylesheet" href="https://fonts.google.com/specimen/League+Spartan">
         <title>kephalosk | Social proof section</title>
         <style>
             .attribution {
@@ -12,6 +13,63 @@
             }
             .attribution a {
                 color: hsl(228, 45%, 44%);
+            }
+            .leftMargin {
+                margin-left: 64px;
+            }
+            .leftMarginLarge {
+                margin-left: 128px;
+            }
+            .topBar {
+                display: grid;
+                grid-template-columns: auto 1fr;
+            }
+            .topBarStarContainer {
+                display: grid;
+                justify-content: center;
+                grid-template-rows: auto auto auto;
+                margin-top: 60px;
+            }
+            .topBarStarContainerBar {
+                align-items: center;
+                background-color: hsl(300, 24%, 96%);
+                border-radius: 10px;
+                display: flex;
+                justify-content: flex-start;
+                margin: 1px;
+                height: 64px;
+                padding-left: 24px;
+                width: 380px;
+            }
+            .topBarStarContainerBar label{
+                color: hsl(300, 43%, 22%);
+                font-weight: bold;
+                padding: 0 24px;
+            }
+            body {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                font-family: "League Spartan",sans-serif;
+                justify-content: center;
+            }
+            h1 {
+                color: hsl(300, 43%, 22%);
+                font-size: 42px;
+                max-width: 400px;
+            }
+            header {
+                max-width: 500px;
+            }
+            main {
+                display: grid;
+                grid-template-rows: auto 1fr;
+                margin: 115px 10vw;
+            }
+            p {
+                color: hsl(300, 43%, 22%);
+                letter-spacing: 1px;
+                line-height: 175%;
             }
         </style>
     </head>
@@ -24,7 +82,7 @@
                         See what our satisfied customers are saying about our services.</p>
                 </header>
                 <div class="topBarStarContainer">
-                    <div class="topBarStarBar">
+                    <div class="topBarStarContainerBar">
                         <img src="images/icon-star.svg" alt="start icon">
                         <img src="images/icon-star.svg" alt="start icon">
                         <img src="images/icon-star.svg" alt="start icon">
@@ -32,22 +90,27 @@
                         <img src="images/icon-star.svg" alt="start icon">
                         <label class="topBarStarBarLabel">Rated 5 Stars in Reviews</label>
                     </div>
-                    <div class="topBarStarBar">
-                        <img src="images/icon-star.svg" alt="start icon">
-                        <img src="images/icon-star.svg" alt="start icon">
-                        <img src="images/icon-star.svg" alt="start icon">
-                        <img src="images/icon-star.svg" alt="start icon">
-                        <img src="images/icon-star.svg" alt="start icon">
-                        <label class="topBarStarBarLabel">Rated 5 Stars in Report Guru</label>
+                    <div class="leftMargin">
+                        <div class="topBarStarContainerBar">
+                            <img src="images/icon-star.svg" alt="start icon">
+                            <img src="images/icon-star.svg" alt="start icon">
+                            <img src="images/icon-star.svg" alt="start icon">
+                            <img src="images/icon-star.svg" alt="start icon">
+                            <img src="images/icon-star.svg" alt="start icon">
+                            <label class="topBarStarBarLabel">Rated 5 Stars in Report Guru</label>
+                        </div>
                     </div>
-                    <div class="topBarStarBar">
-                        <img src="images/icon-star.svg" alt="start icon">
-                        <img src="images/icon-star.svg" alt="start icon">
-                        <img src="images/icon-star.svg" alt="start icon">
-                        <img src="images/icon-star.svg" alt="start icon">
-                        <img src="images/icon-star.svg" alt="start icon">
-                        <label class="topBarStarBarLabel">Rated 5 Stars in BestTech</label>
+                    <div class="leftMarginLarge">
+                        <div class="topBarStarContainerBar leftMarginLarge">
+                            <img src="images/icon-star.svg" alt="start icon">
+                            <img src="images/icon-star.svg" alt="start icon">
+                            <img src="images/icon-star.svg" alt="start icon">
+                            <img src="images/icon-star.svg" alt="start icon">
+                            <img src="images/icon-star.svg" alt="start icon">
+                            <label class="topBarStarBarLabel">Rated 5 Stars in BestTech</label>
+                        </div>
                     </div>
+
                 </div>
             </section>
             <section class="bottomBar">
